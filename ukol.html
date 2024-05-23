@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stránka s rámy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .frame {
+            border: 1px solid black;
+            width: 40%;
+            height: 40%;
+            position: absolute;
+        }
+        
+        #frame1 {
+            top: 0;
+            left: 0;
+        }
+        
+        #frame2 {
+            top: 0;
+            right: 0;
+        }
+        
+        #frame3 {
+            bottom: 0;
+            left: 0;
+        }
+        
+        #frame4 {
+            bottom: 0;
+            right: 0;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="frame1" class="frame">
+
+    
+        <iframe align="left" frameborder="0" width="40%" height="40%"
+
+        srcdoc="
+            <!DOCTYPE html>
+                <html lang='cs'>
+                <head>
+                <meta http-equiv='Refresh' content='5'>
+                    <meta charset='UTF-8'>
+                    <title>vložený obsah</title>
+                </head>
+                <body>
+                    <iframe src='http://www.centrum.cz' width='100%' height='400'></iframe>
+                </body>
+                </html>
+                "></iframe>
+    </div>
+    <div id="frame2" class="frame">
+        <iframe src="https://zpravy.aktualne.cz/zahranici/sef-estonske-armady-rozhovor/r~39af2e02175211ef95ee0cc47ab5f122/?utm_source=centrumHP&utm_medium=dynamicleadbox&utm_term=position-0&utm_campaign=Aktualne" frameborder="0"></iframe>
+    </div>
+    <div id="frame3" class="frame">
+        <table>
+            <tr>
+                <th>Atribut</th>
+                <th>Popis</th>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Ohraničení tabulky</td>
+            </tr>
+            <tr>
+                <td>cellpadding</td>
+                <td>Vnitřní odsazení buněk</td>
+            </tr>
+            <tr>
+                <td>cellspacing</td>
+                <td>Vzdálenost mezi buňkami</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>Šířka tabulky</td>
+            </tr>
+            <tr>
+                <td>height</td>
+                <td>Výška tabulky</td>
+            </tr>
+        </table>
+    </div>
+    <div id="frame4" class="frame">
+        <a href="https://cd1.incdatagate.cz/images/1ed565e2-b593-6188-9b96-575dc9cded0d/720x405.jpg" target="_blank"><img src="https://cd1.incdatagate.cz/images/1ed565e2-b593-6188-9b96-575dc9cded0d/720x405.jpg" style="max-width: 20%; max-height: 20%;"></a>
+        <a href="https://steamuserimages-a.akamaihd.net/ugc/1473192524623648689/B3244FCBE59A55B5F121F1B4EABB80854B917FFA/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" target="_blank"><img src="https://steamuserimages-a.akamaihd.net/ugc/1473192524623648689/B3244FCBE59A55B5F121F1B4EABB80854B917FFA/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" style="max-width: 20%; max-height: 20%;"></a>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cantaloupes.jpg/1280px-Cantaloupes.jpg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cantaloupes.jpg/1280px-Cantaloupes.jpg" style="max-width: 20%; max-height: 20%;"></a>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/e/e4/Velk%C3%BD_plivanec.jpg" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Velk%C3%BD_plivanec.jpg" style="max-width: 20%; max-height: 20%;"></a>
+        <a href="https://i.imgur.com/5RxDuzS_d.webp?maxwidth=760&fidelity=grand" target="_blank"><img src="https://i.imgur.com/5RxDuzS_d.webp?maxwidth=760&fidelity=grand" style="max-width: 20%; max-height: 20%;"></a>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById("frame1").getElementsByTagName("iframe")[0].contentWindow.location.reload();
+        }, 5000);
+    </script>
+</body>
+</html>

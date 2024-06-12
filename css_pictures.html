@@ -1,0 +1,247 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Obrázek v CSS</title>
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background: rgb(138, 26, 11);
+            }
+            .scene {
+                position: relative;
+                width: 800px;
+                height: 400px;
+            }
+            .dune_1 {
+                position: absolute;
+                bottom: -50%;
+                left: 40%;
+                width: 100%;
+                height: 100%;
+                background: orange;
+                border-radius: 50% / 100% 100% 0 0;
+                border: 1px solid black; /* added border */
+            }
+            .dune_2 {
+                position: absolute;
+                bottom: -30%;
+                left: -30%;
+                width: 90%;
+                height: 80%;
+                background: orange;
+                border-radius: 50% / 100% 100% 0 0;
+                border: 1px solid black; /* added border */
+            }
+            .dune_3 {
+                position: absolute;
+                bottom: -5%;
+                left: 40%;
+                width: 80%;
+                height: 60%;
+                background: orange;
+                border-radius: 50% / 100% 100% 0 0;
+                border: 1px solid black; /* added border */
+            }
+            .dune_4 {
+                position: absolute;
+                bottom: 10%;
+                left: 27%;
+                width: 30%;
+                height: 30%;
+                background: orange;
+                border-radius: 50% / 100% 100% 0 0;
+                border: 1px solid black; /* added border */
+            }
+            .grass {
+                position: absolute;
+                bottom: -70%;
+                left: -100%;
+                width: 2000%;
+                height: 50%;
+                background: hsl(39, 100%, 50%); /* modified color */
+            }
+            .sun {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                width: 100px;
+                height: 100px;
+                background: pink; /* modified color */
+                border-radius: 50%;
+            }
+            .house {
+                position: absolute;
+                bottom: 53%;
+                left: 70%;
+
+                width: 50px;
+                height: 10px;
+                background: rgb(230, 205, 173); /* modified color */
+                border: 2px solid black;
+            }
+
+            .maxitrailer {
+                position: absolute;
+                bottom: 120%;
+                left: 50%;
+                width: 300px;
+                height: 50px;
+                background: rgb(53, 53, 53); /* modified color */
+                border: 2px solid black;
+                border-radius: 50%; /* added border-radius */
+                transform: rotate(-10deg); /* added rotation */
+            }
+            .maxitrailer_bottom {
+                position: absolute;
+                bottom: 118%;
+                left: 50%;
+                width: 53px;
+                height: 25px;
+                background: rgb(53, 53, 53); /* modified color */
+                border: 2px solid black;
+                border-radius: 50%; /* added border-radius */
+                transform: rotate(-10deg); /* added rotation */
+            }
+            .red_dot {
+                position: absolute;
+                bottom: 120%;
+                left: 52.6%;
+                width: 8px;
+                height: 8px;
+                background: red;
+                border-radius: 50%;
+                border: 2px solid black; /* added border */
+            }
+            .worm {
+                position: absolute;
+                bottom: -50%;
+                left: 50%;
+                width: 200px; /* modified width */
+                height: 40px; /* modified height */
+                background: rgb(167, 98, 9);
+                border-radius: 50%;
+                transform: translateX(-50%);
+                content: "Články"; /* added content */
+                display: flex; /* added display */
+                justify-content: center; /* added justify-content */
+                align-items: center; /* added align-items */
+                color: white; /* added color */
+                font-size: 20px; /* added font-size */
+                font-weight: bold; /* added font-weight */
+                animation: wiggle 0.01s infinite; /* added animation */
+                border: 2px solid black; /* added border */
+                border-top-left-radius: 50% 100%; /* added border radius */
+                border-top-right-radius: 50% 100%; /* added border radius */
+                border-bottom-left-radius: 50% 100%; /* added border radius */
+                border-bottom-right-radius: 50% 100%; /* added border radius */
+            }
+
+            @keyframes wiggle {
+                0% {
+                    transform: translateX(-50%) rotate(0deg);
+                }
+                50% {
+                    transform: translateX(-50%) rotate(10deg);
+                }
+                100% {
+                    transform: translateX(-50%) rotate(0deg);
+                }
+            }
+
+            .balloon {
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                width: 40px;
+                height: 50px;
+                background: yellow;
+                border-radius: 50%;
+                transform: translateX(-50%);
+                border: 2px solid black;
+                border-bottom-left-radius: 50% 100%; /* added border radius */
+                border-bottom-right-radius: 50% 100%; /* added border radius */
+            }
+            
+            .rope {
+                position: absolute;
+                top: 33%;
+                left: 49%;
+                width: 2px;
+                height: 6%;
+                background: black;
+                transform: translateX(-50%);
+            }
+            .rope.left {
+                transform: translateX(-50%) rotate(-15deg);
+            }
+            .rope.right {
+                top: 33%;
+                left: 50.8%;
+                transform: translateX(-50%) rotate(15deg);
+            }
+            .basket {
+                position: absolute;
+                bottom: 58%;
+                left: 48.3%;
+                width: 20px;
+                height: 10px;
+                background: rgb(119, 119, 119); /* modified color */
+                border: 2px solid black;
+            
+            }
+            .square {
+                position: absolute;
+                bottom: -55%;
+                left: 39%;
+                width: 50px;
+                height: 80px;
+                background: hsl(39, 100%, 50%); /* modified color */
+                transform: translateX(-50%);
+
+            }
+            .square.right {
+                left: 61%;
+
+            }
+            
+            .window {
+                position: absolute;
+                bottom: 53%;
+                left: 72%;
+                width: 5px;
+                height: 5px;
+                background: rgb(0, 0, 0); /* modified color */
+                border: 2px solid black;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="scene">
+            <div class="sun"></div>
+            <div class="house"></div>
+            <div class="window"></div>
+            <div class="dune_4"></div>
+            <div class="dune_3"></div>
+            <div class="dune_2"></div>
+            <div class="dune_1"></div>
+            <div class="grass"></div>
+            <div class="maxitrailer"></div>
+            <div class="maxitrailer_bottom"></div>
+            <div class="red_dot"></div>
+            <div class="worm"></div>
+            <div class="balloon"></div>
+            <div class="rope left"></div>
+            <div class="rope right"></div>
+            <div class="basket"></div>
+            <div class="square"></div>
+            <div class="square right"></div>
+        </div>
+    </body>
+    </html>

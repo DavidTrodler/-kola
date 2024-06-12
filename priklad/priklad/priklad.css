@@ -1,0 +1,69 @@
+/* CSS Document */
+
+/* Globální styly */
+body {
+  background-color: #f0f0f0; /* Svìtle šedé pozadí */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Hlavièka */
+.header {
+  background-color: #4CAF50; /* Zelené pozadí */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Hlavní obsah */
+.main-content {
+  display: flex; /* Flexbox pro hlavní obsah */
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+/* Hero sekce */
+.hero {
+  background-image: url('hero-banner.jpg'); /* Obrázek na pozadí */
+  background-position: center center; /* Umístìní obrázku do støedu */
+  background-repeat: no-repeat; /* Žádné opakování obrázku */
+  background-size: cover; /* Obrázek pokryje celý element */
+  width: 100%;
+  height: 300px;
+  display: flex; /* Flexbox pro obsah */
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Sekce s èlánky */
+.articles {
+  display: grid; /* Grid layout pro èlánky */
+  grid-template-columns: 1fr 1fr; /* Dva sloupce */
+  grid-template-rows: auto; /* Automatická výška øádku */
+  gap: 20px; /* Mezery mezi èlánky */
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Jednotlivý èlánek */
+.article {
+  background-color: white; /* Bílé pozadí */
+  padding: 20px;
+  border: 1px solid #ddd; /* Svìtle šedý okraj */
+  border-radius: 5px; /* Zaoblené rohy */
+}
+
+/* Patièka */
+.footer {
+  background-color: #333; /* Tmavì šedé pozadí */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+

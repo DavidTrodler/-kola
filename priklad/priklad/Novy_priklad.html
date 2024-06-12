@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komplexní příklad CSS</title>
+  <link rel="stylesheet" href="priklad.css">
+  <style>
+    /* CSS Document */
+
+    /* Globální styly */
+    body {
+      background-color: #F5F5F5;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hlavička */
+    .header {
+      background-color: #333333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Animace */
+    @keyframes colorChange {
+      0% { color: #FF0000; }
+      25% { color: #00FF00; }
+      50% { color: #0000FF; }
+      75% { color: #FF00FF; }
+      100% { color: #FFFF00; }
+    }
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      padding: 20px;
+      animation: colorChange 5s infinite;
+    }
+
+    /* Hero sekce */
+    .hero {
+      background-image: url('hero-banner.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Sekce s články */
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      justify-content: center;
+      animation: colorChange 5s infinite;
+    }
+
+    /* Jednotlivý článek */
+    .article {
+      background-color: #F5F5F5;
+      padding: 20px;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Patička */
+    .footer {
+      background-color: #333333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 100px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    /* Úpravy barev */
+    .header h1 {
+      color: #FF0000;
+    }
+
+    .hero h2 {
+      color: #00FF00;
+    }
+
+    .article h3 {
+      color: #0000FF;
+    }
+
+    .article p {
+      color: #FF00FF;
+    }
+
+    .footer p {
+      color: #FFFF00;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Moje Webova Stranka</h1>
+  </header>
+  <main class="main-content">
+    <section class="hero">
+      <h2>Vitejte na mem blogu o cestovani</h2>
+    </section>
+    <section class="articles">
+      <div class="article">
+        <h3>Prvni clanek</h3>
+        <p>Toto je obsah prvniho clanku.</p>
+      </div>
+      <div class="article">
+        <h3>Druhy clanek</h3>
+        <p>Toto je obsah druheho clanku.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Moje Webova Stranka</p>
+  </footer>
+</body>
+</html>
